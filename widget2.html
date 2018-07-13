@@ -13,7 +13,7 @@
 	<div class="tutto">
 	</div>
 	<div class="header">
-		<h1 class="titolo">IL METEO (modificato)</h1>
+		<h1 class="titolo">IL METEO</h1>
 		<marquee>city:{{weather.name}}{{weather.sys.country}}</marquee>
 	</div>
 	<div class="container">
@@ -31,7 +31,7 @@
 		<div class="menu">
 		    <div class="list">
 				<div class="sole"><img src={{img}}></div>
-				<h4>{{weather.name}}{{weather.sys.country}}</h4>
+				<h4>{{weather.name}} {{weather.sys.country}}</h4>
 				<font color="white">{{weather.weather[0].description}}</font>
 				<h4><br>{{weather.main.temp}}</h4>
 			</div>
@@ -41,16 +41,15 @@
 				<div class="pad"><h3>{{pressione}}<br><p class="tmp">{{weather.main.pressure}}</p></h3></div>
 			</div>
 			<div class="destra">
-				<br><ul ng-repeat="obj in vect">
-				 <div class="sole2"><img src={{obj.img}}></div><font size="6"> &nbsp&nbsp&nbsp {{obj.city.name}} {{obj.city.main.temp}}</font>
-				</ul>
+				<br><ul ng-repeat="obj in vect|filter:city|limitTo:5">
+				 <div class="sole2"><img src={{obj.img}}></div><font size="6"> &nbsp&nbsp&nbsp{{obj.city.name}} {{obj.city.main.temp}}</font></ul>
 			</div>
 	   </div>
 
 	</div>
 	<div class="autore">
 		<br><br>
-<font color="white"> © 2018 Marco's Weather Widget. All Rights Reserved | Design By marco wang</font>
+<font color="white"> © 2018 Weather Widget. All Rights Reserved | Design By marco wang</font>
 <div>
 </body>
 </html>

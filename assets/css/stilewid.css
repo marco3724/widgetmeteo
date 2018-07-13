@@ -98,6 +98,7 @@ margin-right:auto;
 	width:600px;
 	height:150px;
 	background-color:#1e90ffb8;
+	    /*border: 3px solid #f5390f40;*/
 	}
 .sinistra{
 	width:240px;
@@ -105,12 +106,14 @@ margin-right:auto;
 	float:left;
 	margin:0;
 	background-color:#1effd5b0;
+	 /*border: 3px solid #f5390f40;*/
 	}
 .destra{
 	width:360px;
 	height:350px;
 	float:left;
 	margin:0;
+	 /*border: 3px solid #f5390f40;*/
 	background-color:#ff1e1ea1;
 	}
 	.autore{
